@@ -1,4 +1,5 @@
 from flask import Flask
+import os
 
 application = Flask(__name__)
 
@@ -8,4 +9,4 @@ def hello():
     return 'Mi vieja mula ya no es lo que era!!'
 
 if __name__ == '__main__':
-    application.run(host='0.0.0.0', port=8888)
+    application.run(host=os.getenv('HOST', '0.0.0.0'), port=os.getenv('PORT', '8888'))
