@@ -6,7 +6,7 @@ application = Flask(__name__)
 
 @application.route('/')
 def hello():
-    return 'HELLO DINO'
+    return 'HELLO FROM ELI AND THE WHOLE DINOCLOUD TEAM'
 
 if __name__ == '__main__':
     application.run(host=os.getenv('HOST', '0.0.0.0'), port=os.getenv('PORT', '8888'))
